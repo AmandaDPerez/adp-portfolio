@@ -1,37 +1,20 @@
 import IconCloud from "./ui/icon-cloud";
 
 const slugs = [
-  "typescript",
-  "javascript",
-  "dart",
-  "java",
-  "react",
-  "flutter",
-  "android",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "prisma",
-  "amazonaws",
-  "postgresql",
-  "firebase",
-  "nginx",
-  "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
-  "docker",
-  "git",
-  "jira",
+  "r",
+  "python",
+  "sql",
+  "tableau",
+  "latex",
   "github",
-  "gitlab",
+  "git",
   "visualstudiocode",
-  "androidstudio",
-  "sonarqube",
-  "figma",
+  "markdown",
+  "jupyter",
+  "numpy",
+  "pandas"
 ];
+
 
 function IconCloudDemo() {
   return (

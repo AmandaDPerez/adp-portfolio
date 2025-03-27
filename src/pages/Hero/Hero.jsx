@@ -42,34 +42,37 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript Developer & Creator of Olova.js",
-    "Learning MARN Stack",
-    "Linux & GitHub for DevOps Enthusiast",
+    "Data Scientist & Researcher",
+    "R & Python for Behavioral Insights",
+    "Mixed-Methods & Statistical Modeling",
+    "Dashboards in R Shiny & Tableau",
   ];
 
   const [code] = useState(`
-const profile = {
-    name: 'Nazmul Hossain',
-    title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
-    skills: [
-        'React', 'NextJS', 'Redux', 'Express',
-        'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
-        'GraphQL', 'Git', 'Linux', 'Discord Development'
-    ],
-    hardWorker: true,
-    quickLearner: true,
-    problemSolver: true,
-    yearsOfExperience: 4, 
-    hireable: function() {
-        return (
-            this.hardWorker &&
-            this.problemSolver &&
-            this.skills.length >= 5 &&
-            this.yearsOfExperience >= 3
-        );
-    }
-};
+profile <- list(
+    name = 'Amanda Perez, PhD',
+    title = 'Data Scientist |  Mixed-Methods Researcher',
+    skills = c(
+        'R', 'SQL', 'Python', 'R Shiny',
+        'tidyverse', 'ggplot2', 'dplyr', 'Tableau',
+        'Quarto', 'LaTeX', 'Git', 'Data Visualization',
+        'Qualtrics', 'ATLAS.ti', 'Dedoose', 'Markdown',
+        'machine learning', 'Pandas', 'NumPy'
+    ),
+    hard_worker = TRUE,
+    quick_learner = TRUE,
+    problem_solver = TRUE,
+    years_experience = 11
+  ) 
+
+  hireable <- function(profile) {
+      profile$hard_worker &&
+          profile$problem_solver &&
+          length(profile$skills) >=5 &&
+          profile$years_experience >= 3
+  }
+  hireable(profile)
+   # [1] TRUE
   `);
 
   useEffect(() => {
@@ -138,7 +141,7 @@ const profile = {
                     I'm
                     <span className="typing-effect gradient-text">
                       {" "}
-                      Nazmul Hossain
+                      Amanda Perez, PhD
                     </span>
                   </span>
                 </h1>
@@ -159,8 +162,7 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  JavaScript lover 🚀 | OlovaJS creator 🔧 | Crafting frameworks
-                  and coding the future 💻✨
+                 R Coder 📈 | Behavioral Data Wrangler 🧠 | Making Meaning from Messy Data 💬➡️📊
                 </p>
               </div>
 
@@ -196,18 +198,17 @@ const profile = {
               {/* Floating badges */}
               <div className="hidden lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
                 <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
-                  <i className="fas fa-wand-magic-sparkles"></i>&nbsp;&nbsp;UI
-                  Magic
+                  <i className="fas fa-wand-magic-sparkles"></i>&nbsp;&nbsp;Behavioral Insights
                 </div>
               </div>
               <div className="hidden lg:block absolute right-10 top-20 animate-float">
                 <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
-                  <i className="fas fa-code"></i>&nbsp;&nbsp;Clean Code
+                  <i className="fas fa-code"></i>&nbsp;&nbsp;Statistical Modeling
                 </div>
               </div>
               <div className="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
                 <div className="px-4 py-2 rounded-lg bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-400">
-                  <i className="fas fa-lightbulb"></i>&nbsp;&nbsp;Innovation
+                  <i className="fas fa-lightbulb"></i>&nbsp;&nbsp;Storytelling
                 </div>
               </div>
             </div>
@@ -222,7 +223,7 @@ const profile = {
                     <div className="window-dot bg-green-500"></div>
                     <span className="ml-2 text-sm text-gray-400 flex items-center gap-2">
                       <i className="fas fa-code"></i>
-                      developer.js
+                      profile.R
                     </span>
                   </div>
                   <pre className="language-javascript">
