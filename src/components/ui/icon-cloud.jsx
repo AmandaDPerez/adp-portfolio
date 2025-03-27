@@ -26,6 +26,7 @@ export const cloudProps = {
     outlineColour: "#000",
     maxSpeed: 0.04,
     minSpeed: 0.02,
+    zoom: .55,
     // dragControl: false,
   },
 };
@@ -40,7 +41,7 @@ export const renderCustomIcon = (icon, theme, imageArray) => {
     bgHex,
     fallbackHex,
     minContrastRatio,
-    size: 42,
+    size: 80,
     aProps: {
       href: undefined,
       target: undefined,
@@ -84,7 +85,7 @@ export default function IconCloud({
           imageArray.map((image, index) => {
             return (
               <a key={index} href="#" onClick={(e) => e.preventDefault()}>
-                <img height="42" width="42" alt="A globe" src={image} />
+                <img height="90" width="90" alt="A globe" src={image} />
               </a>
             );
           })}

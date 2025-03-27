@@ -15,24 +15,45 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      degree: "PhD & MA, Social Psychology",
+      school: "University of California, Berkeley",
+      mascot: "🎓", // UC Berkeley’s Golden Bear
+      year: "2015–2021",
+      achievements: [
+        "Dissertation on implicit bias & social cognition",
+        "NSF Graduate Research Fellowship",
+      ],
+      skills: [
+        "Experimental Design",
+        "Linear Modeling",
+        "Multilevel Modeling",
+        "Structural Equation Modeling",
+        "R Programming",
+        "Data Visualization",
+        "Survey Design",
+      ],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+        "Conducted experimental and survey-based research on the measurement and impact of implicit and explicit social biases. Built strong quantitative skills using R to analyze behavioral, cognitive, and social data.",
     },
-    {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+ {
+      degree: "BA, Psychology (Honors)",
+      school: "University of California, Berkeley",
+      mascot: "🐻", // Classic and fits well for undergrad
+      year: "2011–2015",
+      achievements: [
+        "McNair Scholar",
+        "Psychology Honors Program",
+      ],
+      skills: [
+        "Qualtrics",
+        "R (introductory)",
+        "Survey Design",
+        "Statistical Modeling",
+        "Research Methods",
+        "Social Psychology Foundations",
+      ],
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+        "Began independent research on prejudice, bias, and intergroup dynamics through the McNair Scholars and Psychology Honors programs. Gained early experience in experimental design, data collection, and statistical analysis using R and Qualtrics.",
     },
   ];
 
@@ -78,8 +99,7 @@ const EducationSection = () => {
             Educational Journey
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover how academic excellence shapes innovative thinking and
-            professional growth.
+          Educated in methods. Committed to meaning.
           </p>
         </motion.div>
 

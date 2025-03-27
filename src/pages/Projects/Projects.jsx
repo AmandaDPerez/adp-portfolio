@@ -29,14 +29,13 @@ const ProjectShowcase = () => {
     // You can add more projects here
   ];
 
-  const categories = [
-    "All",
-    ...new Set(projects.map((project) => project.category)),
-  ];
+  const categories = ["Recent", "All"];
   const filteredProjects =
-    filter === "All"
-      ? projects
-      : projects.filter((project) => project.category === filter);
+  filter === "All"
+    ? projects
+    : filter === "Recent"
+    ? projects.filter((project) => project.featured)
+    : projects.filter((project) => project.category === filter);
 
   return (
     <div className="min-h-screen bg-[#04081A] py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -60,7 +59,7 @@ const ProjectShowcase = () => {
             <div className="absolute -bottom-2 left-0 w-full h-3 bg-gradient-to-r from-cyan-500 to-emerald-500 opacity-70 blur-sm"></div>
           </div>
           <p className="text-slate-300 max-w-2xl mx-auto text-lg">
-            Explore my creative journey through code and design
+          Personal projects fueled by public data and curiosity
           </p>
         </div>
 

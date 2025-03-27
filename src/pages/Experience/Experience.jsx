@@ -1,6 +1,10 @@
 import React from "react";
 import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
-
+import { GiDiscussion } from "react-icons/gi";
+import { MdHealthAndSafety } from "react-icons/md";
+import { PiBrainBold } from "react-icons/pi"; // From phosphor-react, if using
+import { RiPresentationLine } from "react-icons/ri";
+import { TbTopologyStar } from "react-icons/tb";
 const ExperienceCard = ({
   title,
   company,
@@ -29,11 +33,11 @@ const ExperienceCard = ({
         </h3>
         <div className="flex justify-between items-center text-gray-300">
           <span className="font-semibold text-blue-400">{company}</span>
-          <span className="text-sm font-mono bg-blue-500/10 px-3 py-1 rounded-full">
+          <span className="text-xs font-mono bg-blue-500/30 px-2 py-0.5 rounded-full whitespace-nowrap">
             {period}
           </span>
         </div>
-        <p className="text-gray-300 border-l-4 border-blue-500/50 pl-4 mt-4 leading-relaxed">
+        <p className="text-gray-300 border-l-4 border-blue-500/50 pl-4 mt-4 leading-snug">
           {description}
         </p>
       </div>
@@ -54,28 +58,44 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
+      icon: MdHealthAndSafety,
+      title: "Post-Doctoral Researcher",
+      company: "NIH - Minority Health Disparities",
+      period: "2023 - Present",
       description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
+      <ul className="text-sm text-gray-300 pl-4 mt-4 space-y-2 list-disc list-inside leading-snug">
+      <li>Led mixed-methods studies on racism and health outcomes using R, Python, SQL</li>
+      <li>Built R Shiny/Tableau dashboards; communicated insights to cross-functional teams</li>
+      <li>Applied supervised and unsupervised machine learning techniques to enhance predictive accuracy of health risk models across diverse populations</li>
+      <li>Led the design and implementation of data cleaning and preprocessing workflows to prepare high-dimensional survey and biometric datasets for advanced statistical modeling</li>
+      <li>Led qualitative research sessions with community stakeholders, synthesizing focus group insights to inform data models and strategic recommendations</li>
+    </ul>,
     },
     {
-      icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
+      icon: RiPresentationLine,
+      title: "Post-Doctoral Researcher",
+      company: "UC Berkeley School of Public Health",
+      period: "2021 - 23",
       description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
+      <ul className="text-sm text-gray-300 pl-4 mt-4 space-y-2 list-disc list-inside leading-snug">
+      <li>Led studies on structural racism's impact on health outcomes</li>
+      <li>Developed custom metrics and visualizations for stakeholder use</li>
+      <li>Applied machine learning techniques—including random forest, k-means clustering, and decision trees—to identify key predictors of health disparities and segment populations by risk profiles</li>
+      <li>Addressed sampling biases and missing data using advanced imputation and weighting strategies to strengthen model reliability and generalizability</li>
+      <li>Created reproducible R Markdown reports and presented findings at national and international conferences; contributed to peer-reviewed publications focused on structural determinants of health</li>
+    </ul>,
     },
     {
       icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
-      period: "2023 - Present",
+      title: "Statistical Consultant",
+      company: "UC Berkeley Psychology Department",
+      period: "2023 - 24",
       description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
+      <ul className="text-sm text-gray-300 pl-4 mt-4 space-y-2 list-disc list-inside leading-snug">
+      <li>Supported statistical analysis for randomized controlled trials (A/B testing) of school interventions, ensuring accurate implementation of experimental protocols and results interpretation</li>
+      <li>Optimized reproducibility workflows; led data integrity checks for large-scale projects</li>
+      <li>Identified and resolved critical bugs in legacy Stata scripts and translated workflows into R, enhancing reproducibility and efficiency of data analysis</li>
+    </ul>,
     },
   ];
 
@@ -109,17 +129,17 @@ const ExperienceSection = () => {
           <div className="flex flex-col items-center space-y-8 mb-20">
             <div className="relative">
               <h2 className="text-5xl md:text-7xl font-black text-transparent bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-center">
-                Professional Journey
+                Work Experience
               </h2>
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
             </div>
             <p className="text-lg md:text-xl text-gray-400 font-medium tracking-wide text-center max-w-2xl">
-              "Transforming ideas into digital reality, one project at a time"
+              "Telling powerful stories through data and design"
             </p>
           </div>
 
           {/* Experience grid with improved layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-7xl mx-auto">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
             ))}
